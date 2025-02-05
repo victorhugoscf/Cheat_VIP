@@ -1,32 +1,32 @@
-# Cheat_VIP ??  
+# Cheat_VIP 
 
-Uma ferramenta de manipulação de memória desenvolvida em **C#** para modificar intruções e comportamentos de processos em tempo real.  
-
----
-
-## ? Funcionalidades  
-
-- ?? **Anexar a Processos**: Conecte-se a um processo em execução para manipular sua memória.  
-- ?? **Substituição de Instruções**: Modifique códigos assembly em tempo real.  
-- ?? **Injeção de Código**: Insira instruções personalizadas diretamente na memória do processo.  
-- ?? **Autenticação via Pastebin**: Libere funcionalidades com credenciais do Pastebin.  
-- ?? **Interface Gráfica**: Interface intuitiva para facilitar a manipulação.  
+Uma ferramenta de manipulaÃ§Ã£o de memÃ³ria desenvolvida em **C#** para modificar intruÃ§Ãµes e comportamentos de processos em tempo real.  
 
 ---
 
-## ?? **Pré-requisitos**  
+## Funcionalidades  
+
+- ?? **Anexar a Processos**: Conecte-se a um processo em execuÃ§Ã£o para manipular sua memÃ³ria.  
+- ?? **SubstituiÃ§Ã£o de InstruÃ§Ãµes**: Modifique cÃ³digos assembly em tempo real.  
+- ?? **InjeÃ§Ã£o de CÃ³digo**: Insira instruÃ§Ãµes personalizadas diretamente na memÃ³ria do processo.  
+- ?? **AutenticaÃ§Ã£o via Pastebin**: Libere funcionalidades com credenciais do Pastebin.  
+- ?? **Interface GrÃ¡fica**: Interface intuitiva para facilitar a manipulaÃ§Ã£o.  
+
+---
+
+## **PrÃ©-requisitos**  
 
 - **.NET 8.0**  
 - **Windows**  
-- **Pastebin API Key** (para autenticação)  
-- **Permissões de Administrador** (para manipular memória de processos)  
+- **Pastebin API Key** (para autenticaÃ§Ã£o)  
+- **PermissÃµes de Administrador** (para manipular memÃ³ria de processos)  
 
 ---
 
-## ?? **Como Usar**  
+## **Como Usar**  
 
-### ?? 1. **Configuração**  
-Clone o repositório:  
+### 1. **ConfiguraÃ§Ã£o**  
+Clone o repositÃ³rio:  
 
 ```bash
 git clone https://github.com/victorhugoscf/Cheat_VIP.git
@@ -38,95 +38,95 @@ Abra o projeto no **Visual Studio** e configure a chave de API no arquivo `Paste
 private const string PastebinApiKey = "SUA_CHAVE_DE_API_AQUI";
 ```
 
-### ?? 2. **Executando o Projeto**  
+### 2. **Executando o Projeto**  
 1?? Compile o projeto no **Visual Studio**.  
 2?? Execute o aplicativo como **administrador**.  
-3?? Faça login com suas credenciais do **Pastebin**.  
-4?? Anexe-se a um processo e comece a manipular a memória.  
+3?? FaÃ§a login com suas credenciais do **Pastebin**.  
+4?? Anexe-se a um processo e comece a manipular a memÃ³ria.  
 
 ---
 
-## ?? **Exemplos de Uso**  
+## **Exemplos de Uso**  
 
-### ?? **Substituir uma Instrução**  
-Para substituir uma instrução assembly, use:  
+### ?? **Substituir uma InstruÃ§Ã£o**  
+Para substituir uma instruÃ§Ã£o assembly, use:  
 
 ```csharp
 memoryPatcher.ReplaceInstruction(address, valor, "eax", 5, 1); // Substitui 5 bytes e preenche 1 byte com NOP
 ```
 
-### ?? **Restaurar o Código Original**  
-Caso precise restaurar o código original:  
+### **Restaurar o CÃ³digo Original**  
+Caso precise restaurar o cÃ³digo original:  
 
 ```csharp
-byte[] originalCode = new byte[] { 0x8B, 0x8D, 0x24, 0xFF, 0xFF, 0xFF }; // Código original
+byte[] originalCode = new byte[] { 0x8B, 0x8D, 0x24, 0xFF, 0xFF, 0xFF }; // CÃ³digo original
 memoryPatcher.RestoreOriginalCode(address, originalCode);
 ```
 
 ---
 
-## ?? **Interface Gráfica**  
+## **Interface GrÃ¡fica**  
 
-- ?? **Aba de Processos**: Liste e anexe-se a processos em execução.  
-- ?? **Aba de Cheats**: Ative/desative hacks e modifique valores em tempo real.  
-- ?? **Autenticação**: Faça login via **Pastebin**.  
+- **Aba de Processos**: Liste e anexe-se a processos em execuÃ§Ã£o.  
+- **Aba de Cheats**: Ative/desative hacks e modifique valores em tempo real.  
+- **AutenticaÃ§Ã£o**: FaÃ§a login via **Pastebin**.  
 
-?? **Veja um exemplo da interface abaixo:**  
+ **Veja um exemplo da interface abaixo:**  
 
-![Interface Gráfica](interface.gif)
+![Interface GrÃ¡fica](interface.gif)
 
 
 ---
 
-## ?? **Estrutura do Projeto**  
+## **Estrutura do Projeto**  
 
-?? **Arquivos principais:**  
+ **Arquivos principais:**  
 
 ```
 Cheat_VIP/
-¦-- src/
-¦   +-- Form1.cs            # Interface gráfica principal
-¦   +-- MemoryPatcher.cs    # Lógica de manipulação de memória
-¦   +-- MemoryManager.cs    # Gerenciamento da conexão com o processo
-¦   +-- PastebinAuth.cs     # Autenticação via Pastebin
-¦-- README.md               # Documentação
+Â¦-- src/
+Â¦   +-- Form1.cs            # Interface grÃ¡fica principal
+Â¦   +-- MemoryPatcher.cs    # LÃ³gica de manipulaÃ§Ã£o de memÃ³ria
+Â¦   +-- MemoryManager.cs    # Gerenciamento da conexÃ£o com o processo
+Â¦   +-- PastebinAuth.cs     # AutenticaÃ§Ã£o via Pastebin
+Â¦-- README.md               # DocumentaÃ§Ã£o
 ```
 
 ---
 
-## ?? **Contribuindo**  
+## **Contribuindo**  
 
-Contribuições são bem-vindas! Para colaborar:  
+ContribuiÃ§Ãµes sÃ£o bem-vindas! Para colaborar:  
 
 ```bash
-# 1?? Faça um fork do projeto
+# 1 FaÃ§a um fork do projeto
 git clone https://github.com/victorhugoscf/Cheat_VIP.git
 
-# 2?? Crie uma branch para sua feature
+# 2 Crie uma branch para sua feature
 git checkout -b feature/nova-feature
 
-# 3?? Commit suas mudanças
+# 3 Commit suas mudanÃ§as
 git commit -m "Adicionando nova funcionalidade"
 
-# 4?? Envie para o GitHub
+# 4 Envie para o GitHub
 git push origin feature/nova-feature
 ```
 
 ---
 
-## ?? **Licença**  
+## **LicenÃ§a**  
 
-Este projeto foi criado para fins educacionais, não me responsabilizo por uso indevido.  
+Este projeto foi criado para fins educacionais, nÃ£o me responsabilizo por uso indevido.  
 
 ---
 
-## ?? **Contato**  
+## **Contato**  
 
 ?? **Email:** [victorhugoscf@gmail.com](mailto:victorhugoscf@gmail.com)  
 ?? **GitHub:** [victorhugoscf](https://github.com/victorhugoscf)  
 
 ---
 
-### ?? **Gostou do projeto?**  
+### **Gostou do projeto?**  
 
-? **Deixe uma estrela no repositório!** ????  
+ **Deixe uma estrela no repositÃ³rio!** 
