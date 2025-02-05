@@ -8,7 +8,7 @@ namespace Cheat_VIP
     {
         private readonly MemoryManager memoryManager;
 
-        // Dicionário de opcodes para mov <registrador>, <valor>
+        // Dicionário de opcodes
         private static readonly Dictionary<string, byte> RegisterOpcodes = new Dictionary<string, byte>
         {
             { "eax", 0xB8 }, // mov eax, <valor>
@@ -24,7 +24,7 @@ namespace Cheat_VIP
             this.memoryManager = memoryManager;
         }
 
-        // Método para escrever na memória (agora retorna bool)
+        // Método para escrever na memória 
         public bool WriteMemory(IntPtr address, byte[] value)
         {
             try
@@ -46,7 +46,7 @@ namespace Cheat_VIP
             }
         }
 
-        // Método para substituir a instrução (agora generalizado)
+        // Método para substituir a instrução 
         public void ReplaceInstruction(IntPtr address, int value, string register, int bytesToReplace, int bytesToNop)
         {
             try
@@ -57,17 +57,17 @@ namespace Cheat_VIP
                     return;
                 }
 
-                // Verifica se o registrador é válido
+                
                 if (!RegisterOpcodes.ContainsKey(register.ToLower()))
                 {
                     MessageBox.Show("Registrador inválido.");
                     return;
                 }
 
-                // Obtém o opcode correspondente ao registrador
+                
                 byte opcode = RegisterOpcodes[register.ToLower()];
 
-                // Código assembly para mov <registrador>, <valor>
+               
                 byte[] newCode = new byte[]
                 {
             opcode, 0x00, 0x00, 0x00, 0x00 // mov <registrador>, <valor>

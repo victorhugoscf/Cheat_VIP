@@ -64,7 +64,7 @@ namespace Cheat_VIP
             return processHandle != IntPtr.Zero;
         }
 
-        // Método para escrever na memória (agora retorna bool)
+        // Método para escrever na memória 
         public bool WriteMemory(IntPtr address, byte[] value)
         {
             try
@@ -143,7 +143,7 @@ namespace Cheat_VIP
             }
         }
 
-        // Método para liberar memória (agora retorna bool)
+        // Método para liberar memória 
         public bool FreeMemory(IntPtr address, uint size)
         {
             try

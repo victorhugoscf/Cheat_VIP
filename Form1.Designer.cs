@@ -126,12 +126,10 @@
             // 
             // txtUsername
             // 
-            txtUsername.ForeColor = SystemColors.ActiveCaptionText;
-            txtUsername.Location = new Point(75, 24);
-            txtUsername.Margin = new Padding(4, 3, 5, 3);
+            txtUsername.Location = new Point(76, 19);
             txtUsername.Name = "txtUsername";
             txtUsername.Size = new Size(113, 25);
-            txtUsername.TabIndex = 2;
+            txtUsername.TabIndex = 0;
             // 
             // label5
             // 

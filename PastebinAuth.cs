@@ -7,7 +7,7 @@ namespace Cheat_VIP
 {
     public class PastebinAuth
     {
-        private const string PastebinUrl = "https://pastebin.com/raw/mk2xjYiz"; // Substitua pelo link do seu Pastebin
+        private const string PastebinUrl = "https://pastebin.com/raw/mk2xjYiz"; 
 
         public async Task<bool> AuthenticateAsync(string username, string password)
         {
@@ -15,17 +15,10 @@ namespace Cheat_VIP
             {
                 try
                 {
-                    // Faz a requisição HTTP para o Pastebin
                     string pastebinContent = await client.GetStringAsync(PastebinUrl);
-
-                    // Remove espaços em branco e caracteres de nova linha
                     pastebinContent = pastebinContent.Trim();
-
-                    // Divide o conteúdo em linhas
                     string[] validLogins = pastebinContent.Split(new[] { '\n' }, StringSplitOptions.RemoveEmptyEntries);
-
-                    // Verifica cada linha
-                    foreach (string validLogin in validLogins)
+                        foreach (string validLogin in validLogins)
                     {
                         // Remove espaços em branco e divide a linha em login e senha
                         string[] parts = validLogin.Trim().Split(':');

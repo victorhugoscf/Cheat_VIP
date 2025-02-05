@@ -8,12 +8,11 @@ namespace Cheat_VIP
 {
     public partial class Form1 : Form
     {
-        // Variáveis
         private MemoryManager memoryManager;
         private MemoryPatcher memoryPatcher;
         private PastebinAuth pastebinAuth;
 
-        // Endereços de memória (agora em uma classe estática)
+        // Address
         private static class MemoryAddresses
         {
             public static readonly IntPtr TravaHP = (IntPtr)0x00A90C50;
@@ -36,10 +35,8 @@ namespace Cheat_VIP
             memoryManager = new MemoryManager();
             memoryPatcher = new MemoryPatcher(memoryManager);
             pastebinAuth = new PastebinAuth();
-            // Remove as abas inicialmente
             TabControl.TabPages.Remove(tabPageProcess);
             TabControl.TabPages.Remove(tabPageCheats);
-            // Adiciona os itens ao ComboBox
             comboBox1.Items.Add("8");
             comboBox1.Items.Add("9");
             comboBox1.Items.Add("10");
@@ -92,7 +89,7 @@ namespace Cheat_VIP
             if (await pastebinAuth.AuthenticateAsync(username, password))
             {
                 MessageBox.Show("Login bem-sucedido!");
-                TabControl.TabPages.Add(tabPageProcess); // Libera a aba de processos
+                TabControl.TabPages.Add(tabPageProcess); 
                 TabControl.SelectedTab = tabPageProcess;
                 CarregarProcessos();
             }
@@ -109,7 +106,7 @@ namespace Cheat_VIP
             if (memoryManager.AttachToProcess(processName))
             {
                 MessageBox.Show("Processo anexado com sucesso!");
-                TabControl.TabPages.Add(tabPageCheats); // Libera a aba de cheats
+                TabControl.TabPages.Add(tabPageCheats); 
                 TabControl.SelectedTab = tabPageCheats;
             }
             else
@@ -135,7 +132,7 @@ namespace Cheat_VIP
             }
         }
 
-        // Cheat: Travar HP
+        //Travar HP
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBox1.Checked)
@@ -148,7 +145,7 @@ namespace Cheat_VIP
             }
         }
 
-        // Cheat: Travar MP
+        //Travar MP
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBox2.Checked)
@@ -161,7 +158,7 @@ namespace Cheat_VIP
             }
         }
 
-        // Cheat: Travar Resistência
+        //Travar Res
         private void checkBox3_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBox3.Checked)
@@ -174,7 +171,7 @@ namespace Cheat_VIP
             }
         }
 
-        // Cheat: Definir Dano Mínimo
+        //Dano Mínimo
         private void checkBoxValue1_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBoxValue1.Checked)
@@ -196,7 +193,7 @@ namespace Cheat_VIP
             }
         }
 
-        // Cheat: Definir Dano Máximo
+        //Dano Máximo
         private void checkBoxValue2_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBoxValue2.Checked)
@@ -260,7 +257,7 @@ namespace Cheat_VIP
             }
 
         }
-
+        //ATACKSPEED
         private void checkBox6_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBox6.Checked)
@@ -286,7 +283,7 @@ namespace Cheat_VIP
 
 
         }
-
+        //VelSpeed
         private void checkBox7_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBox7.Checked)
@@ -304,7 +301,7 @@ namespace Cheat_VIP
             }
 
         }
-
+        //Critico
         private void checkBox8_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBox8.Checked)
@@ -322,7 +319,7 @@ namespace Cheat_VIP
             }
 
         }
-
+        //Block
         private void checkBox9_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBox9.Checked)
@@ -340,6 +337,8 @@ namespace Cheat_VIP
             }
 
         }
+
+        
     }
 }
 
