@@ -6,11 +6,11 @@ Uma ferramenta de manipulação de memória desenvolvida em **C#** para modifica
 
 ## Funcionalidades  
 
-- ?? **Anexar a Processos**: Conecte-se a um processo em execução para manipular sua memória.  
-- ?? **Substituição de Instruções**: Modifique códigos assembly em tempo real.  
-- ?? **Injeção de Código**: Insira instruções personalizadas diretamente na memória do processo.  
-- ?? **Autenticação via Pastebin**: Libere funcionalidades com credenciais do Pastebin.  
-- ?? **Interface Gráfica**: Interface intuitiva para facilitar a manipulação.  
+-  **Anexar a Processos**: Conecte-se a um processo em execução para manipular sua memória.  
+-  **Substituição de Instruções**: Modifique códigos assembly em tempo real.  
+-  **Injeção de Código**: Insira instruções personalizadas diretamente na memória do processo.  
+-  **Autenticação via Pastebin**: Libere funcionalidades com credenciais do Pastebin.  
+-  **Interface Gráfica**: Interface intuitiva para facilitar a manipulação.  
 
 ---
 
@@ -39,16 +39,16 @@ private const string PastebinApiKey = "SUA_CHAVE_DE_API_AQUI";
 ```
 
 ### 2. **Executando o Projeto**  
-1?? Compile o projeto no **Visual Studio**.  
-2?? Execute o aplicativo como **administrador**.  
-3?? Faça login com suas credenciais do **Pastebin**.  
-4?? Anexe-se a um processo e comece a manipular a memória.  
+1 Compile o projeto no **Visual Studio**.  
+2 Execute o aplicativo como **administrador**.  
+3 Faça login com suas credenciais do **Pastebin**.  
+4 Anexe-se a um processo e comece a manipular a memória.  
 
 ---
 
 ## **Exemplos de Uso**  
 
-### ?? **Substituir uma Instrução**  
+###  **Substituir uma Instrução**  
 Para substituir uma instrução assembly, use:  
 
 ```csharp
@@ -122,8 +122,8 @@ Este projeto foi criado para fins educacionais, não me responsabilizo por uso i
 
 ## **Contato**  
 
-?? **Email:** [victorhugoscf@gmail.com](mailto:victorhugoscf@gmail.com)  
-?? **GitHub:** [victorhugoscf](https://github.com/victorhugoscf)  
+ **Email:** [victorhugoscf@gmail.com](mailto:victorhugoscf@gmail.com)  
+ **GitHub:** [victorhugoscf](https://github.com/victorhugoscf)  
 
 ---
 
