@@ -1,0 +1,30 @@
+# Ignorar arquivos de build
+bin/
+obj/
+
+# Ignorar arquivos de usuário do Visual Studio
+.vscode/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Ignorar arquivos de configuração de pacotes
+packages/
+*.nupkg
+*.snupkg
+
+# Ignorar arquivos de log e temporários
+*.log
+*.tmp
+
+# Ignorar arquivos gerados automaticamente pelo Visual Studio
+.vs/
+.DS_Store
+
+# Ignorar o arquivo de banco de dados do LocalDB
+*.mdf
+*.ldf
+
+# Ignorar arquivos de migrações do Entity Framework
+Migrations/
